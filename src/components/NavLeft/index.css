@@ -1,0 +1,18 @@
+.nav-left .logo {
+    line-height: 90px;
+    background-color: #002140;
+    text-align: center;
+}
+
+.nav-left .logo img {
+    width: 132px;
+    height: 47px;
+}
+
+.nav-left .logo h1 {
+    color: #ffffff;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
