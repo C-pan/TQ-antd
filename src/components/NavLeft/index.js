@@ -3,6 +3,7 @@ import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom'
 import './index.css';
 import menuConfig from '../../config/menuConfig';
+import ScrollArea  from  'react-scrollbar';
 const SubMenu = Menu.SubMenu;
 
 export default class NavLeft extends React.Component {
@@ -64,31 +65,38 @@ export default class NavLeft extends React.Component {
                     </Link>
                     
                 </div>
-                <Menu
-                    theme={this.state.theme}
-                    mode="inline"
-                    openKeys={this.state.openKeys}
-                    selectedKeys={[this.state.current]}
-                    // style={{ width: 220 }}
-                    onOpenChange={this.onOpenChange}
-                    onClick={this.handleClick}
+                <ScrollArea
+                    speed={0.8}
+                    className="scrollarea"
+                    contentClassName="scrollcontent"
+                    vertical={true}
                 >
-                    {/* <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
-                        <Menu.Item key="1"><Link to="/admin/home"> admin Home Option 1</Link></Menu.Item>
-                        <Menu.Item key="2"><Link to="/admin/about">about </Link></Menu.Item>
-                        <Menu.Item key="3">Option 3</Menu.Item>
-                        <Menu.Item key="4">Option 4</Menu.Item>
-                    </SubMenu> 
-                    <Menu.Item key="6"><Link to="/admin/Login"><Icon type="appstore" />login </Link></Menu.Item>
-                    <SubMenu key="sub4" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
-                        <Menu.Item key="9">Option 9</Menu.Item>
-                        <Menu.Item key="10">Option 10</Menu.Item>
-                        <Menu.Item key="11">Option 11</Menu.Item>
-                        <Menu.Item key="12">Option 12</Menu.Item>
-                    </SubMenu> */}
+                    <Menu
+                        theme={this.state.theme}
+                        mode="inline"
+                        openKeys={this.state.openKeys}
+                        selectedKeys={[this.state.current]}
+                        // style={{ width: 220 }}
+                        onOpenChange={this.onOpenChange}
+                        onClick={this.handleClick}
+                    >
+                        {/* <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
+                            <Menu.Item key="1"><Link to="/admin/home"> admin Home Option 1</Link></Menu.Item>
+                            <Menu.Item key="2"><Link to="/admin/about">about </Link></Menu.Item>
+                            <Menu.Item key="3">Option 3</Menu.Item>
+                            <Menu.Item key="4">Option 4</Menu.Item>
+                        </SubMenu> 
+                        <Menu.Item key="6"><Link to="/admin/Login"><Icon type="appstore" />login </Link></Menu.Item>
+                        <SubMenu key="sub4" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
+                            <Menu.Item key="9">Option 9</Menu.Item>
+                            <Menu.Item key="10">Option 10</Menu.Item>
+                            <Menu.Item key="11">Option 11</Menu.Item>
+                            <Menu.Item key="12">Option 12</Menu.Item>
+                        </SubMenu> */}
 
-                    {this.state.menuTreeNode}
-                </Menu>
+                        {this.state.menuTreeNode}
+                    </Menu>
+                </ScrollArea>
             </div>
             
         );

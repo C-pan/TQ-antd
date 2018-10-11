@@ -1,0 +1,81 @@
+.info_box {
+    margin: 1%;
+    width: 98%;
+    font-family: "Microsoft YaHei";
+    color: rgb( 51, 51, 51);
+    text-align: left;
+    height: 110px;
+}
+
+.info_itme {
+    margin: 1%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 23%;
+    height: 100px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.info_icon {
+    float: left;
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+}
+
+.nav_icon {
+    margin-right: 10px;
+    display: inline-block;
+    line-height: 60px;
+    width: 18px;
+    height: 18px;
+}
+
+.dev_bg {
+    background: #fe4342;
+}
+
+.today_bg {
+    background: #7263b3;
+}
+
+.yseterday_bg {
+    background: #06bae5;
+}
+
+.total_bg {
+    background: #01c652;
+}
+
+.info_icon>img {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.info_num {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.info_name {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#statistics_line {
+    margin: 2%;
+    padding: 2% 1%;
+    box-sizing: border-box;
+    width: 96%;
+    min-height: 300px;
+    height: -o-calc(100% - 245px);
+    height: -ms-calc(100%- 245px);
+    height: -webkit-calc(100% - 245px);
+    height: calc(100% - 245px);
+    background: #fff;
+}

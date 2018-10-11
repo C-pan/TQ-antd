@@ -145,7 +145,7 @@ module.exports = {
             loader: require.resolve('babel-loader'),
             options: {
               plugins: [
-                ['import', [{ libraryName: "antd", style: 'css' }]],//按需加載css 和js
+                // ['import', [{ libraryName: "antd", style: 'css' }]],//按需加載css 和js
                 ['import', [{ libraryName: "antd", style: true }]],  // 加载 less 文件
               ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
@@ -191,11 +191,48 @@ module.exports = {
               },
             ],
           },
-          // 解析 less 文件，并加入变量覆盖配置
           {
             test: /\.less$/,
-            loader: 'style!css!postcss!less?{modifyVars:{"@primary-color":"#1DA57A"}}'
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 1,
+                },
+              },
+              {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                  // Necessary for external CSS imports to work
+                  // https://github.com/facebookincubator/create-react-app/issues/2677
+                  ident: 'postcss',
+                  plugins: () => [
+                    require('postcss-flexbugs-fixes'),
+                    autoprefixer({
+                      browsers: [
+                        '>1%',
+                        'last 4 versions',
+                        'Firefox ESR',
+                        'not ie < 9', // React doesn't support IE8 anyway
+                      ],
+                      flexbox: 'no-2009',
+                    }),
+                  ],
+                },
+              },
+              {
+                loader:require.resolve('less-loader'),
+                options:{
+                  modules:false,
+                  modifyVars:{
+                    "@primary-color":'#f0ad4e'
+                  }
+                }
+              }
+            ],
           },
+          
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.

@@ -1,0 +1,79 @@
+.order_box {
+    margin: 1% 2%;
+    width: 96%;
+    font-family: "Microsoft YaHei";
+    color: rgb( 51, 51, 51);
+    text-align: center;
+    height: 200px;
+}
+
+#order_table_tit {
+    height: 70px;
+    background: #ff9b3c;
+    color: #fff;
+}
+
+#order_table_tit th {
+    text-align: center;
+}
+
+#order_tbale {
+    width: 100%;
+}
+
+#order_tbale tr td,
+#order_tbale tr th {
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #eee;
+}
+
+#order_tbale tr:hover {
+    background: #fff;
+}
+
+#order_tbale thead #order_table_tit:hover {
+    background: #ff9b3c;
+}
+
+.orderline_box {
+    margin: 2% 0 0;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 180px);
+    background: #fff;
+}
+
+.orderline_box .dev_statistics_tabs {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 0 0 20px 0;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    z-index: 1000000;
+}
+
+.orderline_box .active {
+    border-bottom: 3px solid #ff9b3c;
+}
+
+.orderline_box li {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.orderline_box .oroder_statistics {
+    margin-top: 10px;
+    width: 98%;
+    height: calc(100% - 100px);
+    background: #fff;
+}

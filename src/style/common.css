@@ -1,37 +1,72 @@
-.container {
-    /* background: #f1f3f4; */
-}
-
-ul,
-li {
-    list-style: none;
-}
-
-.clearfix:after {
-    content: ' ';
-    clear: both;
-    display: block;
-    visibility: hidden;
-}
-
-.container .nav-left {
-    background-color: #001529;
-    color: #ffffff;
-    height: calc(100vh);
-}
-
-.container .main {
-    height: calc(100vh);
-    background-color: #f1f3f5;
-    overflow: auto;
-}
-
-.container .content {
-    position: relative;
-    padding: 20px;
-}
-
-.container .content-box {
-    margin: 10px;
-    background: #fff;
-}
+    @import './default.less';
+    @import './loading.less';
+    .container {
+        /* background: #f1f3f4; */
+    }
+    
+    ul,
+    li {
+        list-style: none;
+    }
+    
+    .clearfix:after {
+        content: ' ';
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+    
+    .container .nav-left {
+        position: fixed;
+        z-index: 1000;
+        background-color: #001529;
+        color: #ffffff;
+        height: calc(100vh);
+    }
+    
+    .container .main {
+        height: calc(100vh);
+        background-color: #f1f3f5;
+        overflow: auto;
+    }
+    
+    .container .content {
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    
+    .container .content-box {
+        margin: 10px;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    
+    .container .content-box-t {
+        margin: 10px;
+        box-sizing: border-box;
+        /* background: #fff; */
+    }
+    
+    .search-box {
+        padding: 20px !important;
+    }
+    /* 左侧滚动条 */
+    
+    .scrollarea,
+    scrollcontent {
+        height: calc(100vh - 90px);
+    }
+    
+    .go_back {
+        height: 25px;
+        line-height: 25px;
+        padding-left: 5px;
+        background: #fff;
+        margin: 5px 0;
+    }
+    /* 面包屑 */
+    
+    .ant-breadcrumb {
+        background: #f1f3f4;
+    }

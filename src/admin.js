@@ -10,6 +10,12 @@ import NoMatch from './page/nomatch'
 import NavLeft from './components/NavLeft'
 import Header from './components/Header' 
 import Footer from './components/Footer' 
+
+// 日期文字语言配置 
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
+
 export default class Admin extends React.Component {
     render() {
         return (
@@ -18,7 +24,7 @@ export default class Admin extends React.Component {
                     <Col span={4} className="nav-left">
                         <NavLeft/>
                     </Col>
-                    <Col span={20}>
+                    <Col offset={4} span={20}>
                         <Header/>
                         {this.props.children}
                         <Footer />

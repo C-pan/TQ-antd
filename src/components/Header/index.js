@@ -31,11 +31,7 @@ export default class Header extends React.Component {
                              </span>
                          </Dropdown>
                      </Col>
-                 </Row>
-                 <Breadcrumb className="header-Breadcrumb">
-                     <Breadcrumb.Item>首页</Breadcrumb.Item>
-                     <Breadcrumb.Item> 销售状态</Breadcrumb.Item>
-                 </Breadcrumb>
+                 </Row> 
              </div>
          )
      }

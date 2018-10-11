@@ -80,7 +80,16 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    // proxy,
+    "proxy": { //配置项  
+      "/api": {//我们可以在这里设置个口令  
+        "target": "https://smj.byteflyerits.com",//target是api服务器地址 
+        "changeOrigin": true, //这个是是否替换这里一定要写true  
+        "pathRewrite": { //这个是个正则匹配  
+          "^/api": "/"
+        }
+      }
+    },
     before(app) {
       // This lets us open files from the runtime error overlay.
       app.use(errorOverlayMiddleware());
