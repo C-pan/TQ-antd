@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'antd';
 import '../../style/common.css'
 import './index.css'
 
@@ -11,7 +12,7 @@ export default class Home extends React.Component {
         // 图表高度兼容问题
         var wHeight = document.documentElement.clientHeight || document.body.clientHeight;
         var sHeight = document.getElementById('statistics_line').offsetHeight;
-        document.getElementById('statistics_line').style.height = (wHeight - 320) + "px";
+        document.getElementById('statistics_line').style.height = (wHeight - 270) + "px";
         var myChart = echarts.init(document.getElementById('statistics_line'));
         var option = {
             title: {
@@ -62,32 +63,32 @@ export default class Home extends React.Component {
     }
     render() {
         return (
-            <div className="content-box clearfix    "> 
-                <div class="info_box ">
-                    <div class="info_itme">
-                        <div class="info_icon dev_bg">
+            <div className="content-box-t clearfix    "> 
+                
+                <Row>
+                    <Col span={6} className="info_itme">
+                        <div className="info_icon dev_bg">
                             <img src="/assets/images/icons/dev.png" alt="" />
                         </div>
-                        <div class="info_num">283/310</div>
-                        <div class="info_name">在线设备</div>
-                    </div>
-                    <div class="info_itme">
-                        <div class="info_icon today_bg"><img  src="/assets/images/icons/today.png" alt="" /></div>
-                        <div class="info_num">283/310</div>
-                        <div class="info_name">今天收益</div>
-                    </div>
-                    <div class="info_itme">
-                        <div class="info_icon yseterday_bg"><img  src="/assets/images/icons/yseterday.png" alt="" /></div>
-                        <div class="info_num">283/310</div>
-                        <div class="info_name">昨日收益</div>
-                    </div>
-                    <div class="info_itme">
-                        <div class="info_icon total_bg"><img  src="/assets/images/icons/total_mon.png" alt="" /></div>
-                        <div class="info_num">283/310</div>
-                        <div class="info_name">总收益</div>
-                    </div>
-                </div> 
-
+                        <div className="info_num">283/310</div>
+                        <div className="info_name">在线设备</div>
+                    </Col>
+                    <Col span={6} className="info_itme">
+                        <div className="info_icon today_bg"><img src="/assets/images/icons/today.png" alt="" /></div>
+                        <div className="info_num">283/310</div>
+                        <div className="info_name">今天收益</div>
+                    </Col>
+                    <Col span={6} className="info_itme">
+                        <div className="info_icon yseterday_bg"><img src="/assets/images/icons/yseterday.png" alt="" /></div>
+                        <div className="info_num">283/310</div>
+                        <div className="info_name">昨日收益</div>
+                    </Col>
+                    <Col span={6} className="info_itme">
+                        <div className="info_icon total_bg"><img src="/assets/images/icons/total_mon.png" alt="" /></div>
+                        <div className="info_num">283/310</div>
+                        <div className="info_name">总收益</div>
+                    </Col>
+                </Row>
                 <div id="statistics_line">
 
                 </div>

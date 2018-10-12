@@ -64,11 +64,7 @@ class ErrorOrder extends React.Component {
                 }
             }
         }).then((res) => {
-           
-                // this.setState({
-                //     orderInfo: res.result
-                // })
-                // this.renderMap(res.result);
+            
             console.log(res)
             that.setState({
                 dataSource: res.result.item_list
@@ -105,12 +101,12 @@ class ErrorOrder extends React.Component {
                 <Form layout="inline" onSubmit={this.handleSubmit} className="search-box">
                     <FormItem  style={{ width: '120px' }}>
                         {getFieldDecorator('datePickerStart', )(
-                            <DatePicker  />
+                            <DatePicker placeholder="开始时间" />
                         )} 
                     </FormItem>
                     <FormItem> 
                         {getFieldDecorator('datePickerEnd', )(
-                            <DatePicker />
+                            <DatePicker placeholder="结束时间" />
                         )}
                     </FormItem>
                     <FormItem style={{ width: '120px' }}>
@@ -119,6 +115,7 @@ class ErrorOrder extends React.Component {
                         })(
                             <Select
                                 initialValue={'all'}
+                                placeholder="支付方式"
                                 style={{ width: '120px' }}
                             // onChange={this.handleCurrencyChange}
                             >
@@ -174,15 +171,5 @@ class ErrorOrder extends React.Component {
         )
     }
 }
-// class ErrorOrderForm extends React.Component{
-//     render(){
-//         const { getFieldDecorator } = this.props.form;
-//         return(
-//             <div>
-
-//             </div>
-//         )
-//     }
-// }
 export default ErrorOrder = Form.create()(ErrorOrder);
  

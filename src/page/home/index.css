@@ -68,10 +68,10 @@
 }
 
 #statistics_line {
-    margin: 2%;
+    margin: 2% 0 0;
     padding: 2% 1%;
     box-sizing: border-box;
-    width: 96%;
+    width: 100%;
     min-height: 300px;
     height: -o-calc(100% - 245px);
     height: -ms-calc(100%- 245px);

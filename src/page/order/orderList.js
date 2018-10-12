@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from '../../axios';
 import Utils from '../../utils';
-import { Breadcrumb,Form, Icon, Input, Table, Button, DatePicker, Select,Spin } from 'antd';
+import { Breadcrumb, Form, Icon, Input, Table, Button, DatePicker, Select, Spin, message } from 'antd';
 import '../../style/common.css'
-
+import BaseForm from '../../components/BaseForm'
 const FormItem = Form.Item;
 const Option = Select.Option;
  
@@ -48,9 +48,49 @@ class OrderList extends React.Component {
         //提交订单
         this.handleSubmit = this.handleSubmit.bind(this); 
     }
+    formList = [ 
+        {
+            type: 'PERIOD', 
+            startTime: '1',
+            endTime: '1',
+            width: 120,
+        },
+        {
+            type: 'SELECT', 
+            field: 'payment',
+            placeholder: '支付方式',
+            initialValue: '1',
+            width: 100,
+            list: [{ id: '0', name: '全部' }, { id: '1', name: '微信' }, { id: '2', name: '支付宝' }]
+        },
+        {
+            type: 'SELECT',
+            field: 'order_status',
+            placeholder: '交易状态',
+            initialValue: '1',
+            width: 100,
+            list: [{ id: '0', name: '全部' }, { id: '1', name: '成功' }, { id: '2', name: '失败' }]
+        },
+        {
+            type: 'INPUT',
+            field: 'dev_id',
+            placeholder: '请输入设备编号',
+        },
+        {
+            type: 'INPUT',
+            field: 'order_id',
+            placeholder: '请输入订单号',
+        }
+    ]
     componentWillMount = () => {
         this.requestData()
     };
+    // form 查询组件返回的参数值
+    handleFilter = (params) => {
+        console.log("handleFilter")
+        console.log(params)
+        message.info(JSON.stringify(params))
+    }
     requestData(page){
         var that=this;
         var loading = document.getElementById('ajaxLoading');
@@ -66,11 +106,7 @@ class OrderList extends React.Component {
                 }
             }
         }).then((res) => {
-           
-                // this.setState({
-                //     orderInfo: res.result
-                // })
-                // this.renderMap(res.result);
+            
             console.log(res)
             that.setState({
                 dataSource: res.result.item_list
@@ -90,6 +126,7 @@ class OrderList extends React.Component {
                 console.log('Received values of form: ', values);
             }
         });
+        
     }
     refresh = () => {
         this.requestData()
@@ -103,16 +140,18 @@ class OrderList extends React.Component {
                     <Breadcrumb.Item>订单管理</Breadcrumb.Item>
                     <Breadcrumb.Item> 错误订单</Breadcrumb.Item>
                 </Breadcrumb>
-            {/* 表单搜索 */}
-                <Form layout="inline" onSubmit={this.handleSubmit} className="search-box">
+                {/*  封装后的表单查询 */}
+                <BaseForm formList={this.formList} filterSubmit={this.handleFilter} />  
+                {/* 表单查询 */}
+                {/* <Form layout="inline" onSubmit={this.handleSubmit} className="search-box">
                     <FormItem  style={{ width: '120px' }}>
                         {getFieldDecorator('datePickerStart', )(
-                            <DatePicker  />
+                            <DatePicker placeholder="开始时间" />
                         )} 
                     </FormItem>
                     <FormItem> 
                         {getFieldDecorator('datePickerEnd', )(
-                            <DatePicker />
+                            <DatePicker placeholder="结束时间"  />
                         )}
                     </FormItem>
                     <FormItem style={{ width: '120px' }}>
@@ -120,8 +159,8 @@ class OrderList extends React.Component {
                              
                         })(
                             <Select
-                                initialValue={'all'}
-                                style={{ width: '120px' }}
+                                initialValue={'all'} 
+                                placeholder="支付方式"
                             // onChange={this.handleCurrencyChange}
                             >
                                 <Option value="all">全部</Option>
@@ -159,7 +198,7 @@ class OrderList extends React.Component {
                             刷新
                         </Button>
                     </FormItem>
-                </Form>
+                </Form> */}
                 {/* 表格 */}
                 <Table
                     style={{ width: '100%' }}

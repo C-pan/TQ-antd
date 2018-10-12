@@ -307,10 +307,10 @@
 }
 
 .dev_itme {
-    margin: 1%;
+    /* margin: 1%; */
     float: left;
     box-sizing: border-box;
-    padding: 20px;
+    /* padding: 20px; */
     width: 31%;
     height: 100px;
     background: #fff;
