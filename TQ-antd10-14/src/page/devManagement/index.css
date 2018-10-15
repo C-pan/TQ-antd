@@ -1,0 +1,373 @@
+/***********设备管理***********/
+
+.dev_list {
+    width: 100%;
+}
+
+.product_itme {
+    position: relative;
+    margin: 5px 0;
+    padding: 15px 0;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 95%;
+    height: 115px;
+    overflow: hidden;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.photo {
+    padding: 0 5px;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.num {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    background: red;
+    border-radius: 50%;
+}
+
+.dev_info {
+    display: inline-block;
+    height: 60px;
+}
+
+.nearby_time_tit {
+    font-size: 20px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nearby_time_des {
+    font-size: 16px;
+    line-height: 30px;
+    color: #939393;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.outline {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(161, 161, 161, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.inline {
+    display: none;
+}
+
+
+/*********** 设备详情 ***********/
+
+.dev_content {
+    margin: 0 1%;
+    min-height: 100%;
+    padding: 15px 15px 34px 15px;
+    min-height: -moz-calc(99% - 145px);
+    min-height: -o-calc(99% - 145px);
+    min-height: -ms-calc(99% - 145px);
+    min-height: -webkit-calc(99% - 145px);
+    min-height: calc(99% - 145px);
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.devicedetial {
+    display: table;
+    width: 80%;
+    margin: 4% auto
+}
+
+.devicedeticell {
+    display: table-cell;
+}
+
+.devicbtn {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 70px;
+}
+
+.deviceicon {
+    display: block;
+    margin: 0 auto 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.devicepan {
+    display: block;
+    text-align: center;
+    color: #a0a0a0;
+}
+
+.wechat {
+    text-align: right;
+}
+
+.deviceinfo {
+    position: relative;
+    width: 160px;
+    margin: 0 auto
+}
+
+.deviceinfosign {
+    position: absolute;
+    right: -20px;
+    top: 0px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.deviceinfo .deviceinfopic {
+    width: 160px;
+    border-radius: 160px;
+    height: 160px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #e4e4e4;
+}
+
+.deviceinfonum {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 23px;
+    overflow: hidden;
+    height: 23px;
+    width: 100%;
+}
+
+.deviceitembox {
+    text-align: center;
+}
+
+.deviceitem {
+    display: inline-block;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    min-width: 250px;
+}
+
+.deviceitem dt {
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+.deviceitem dd {
+    color: #a9a9a9;
+    padding: 15px
+}
+
+.deviceadmin {
+    border-top: 1px solid #e4e4e4;
+    padding: 30px 0
+}
+
+.devicelistdl {
+    float: left;
+    position: relative;
+    width: 100px;
+    margin: 0 20px 30px;
+    text-align: center;
+}
+
+.devicelistdl img {
+    border: 1px solid #ddd;
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.devidlsign {
+    background: #d0021b;
+    border-radius: 10px;
+    color: #fff;
+    padding: 1px 6px;
+    font-size: 12px;
+    top: 3px;
+    position: absolute;
+    right: 0px;
+}
+
+.devicelistdl dt {
+    font-size: 18px;
+    padding: 10px 0 0px;
+}
+
+.devicelistdl dd {
+    color: #a0a0a0
+}
+
+.replendivbox {
+    border-top: 1px solid #ebebeb;
+    padding: 30px 0;
+    margin: 0 20px;
+}
+
+.replendivlist li {
+    margin-bottom: 30px;
+}
+
+.replenpan {
+    float: left;
+    width: 60px;
+}
+
+.replenpandiv {
+    margin-left: 60px;
+}
+
+.deviceitembox {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.editicon {
+    /* background: url(./assets/images/devm/edit.png) left bottom no-repeat; */
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    float: left;
+}
+
+.replenpname {}
+
+.replenpnamepan {}
+
+.selreplenbtn {
+    color: #ffc400;
+}
+
+.removebtn {
+    color: #fd475d;
+    border: 1px solid #fd475d;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.replenhatpro {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.dev_outline {
+    padding: 0 5px;
+    background: #424242;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.dev_inline {
+    padding: 0 5px;
+    background: #ff9b3c;
+    border-radius: 2px;
+    color: #fff;
+}
+
+
+/*********** 设备统计 ***********/
+
+.dev_box {
+    width: 100%;
+    font-family: "Microsoft YaHei";
+    color: rgb( 51, 51, 51);
+    text-align: center;
+    height: 110px;
+}
+
+.dev_itme {
+    /* margin: 1%; */
+    float: left;
+    box-sizing: border-box;
+    /* padding: 20px; */
+    width: 31%;
+    height: 100px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.dev_num {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.dev_name {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.line_box {
+    margin: 2%;
+    padding: 2% 1%;
+    box-sizing: border-box;
+    width: 96%;
+    height: -moz-calc(100% - 160px);
+    height: -o-calc(100% - 160px);
+    height: -ms-calc(100%- 160px);
+    height: -webkit-calc(100% - 160px);
+    height: calc(100% - 160px);
+    background: #fff;
+}
+
+.dev_statistics_tabs .dev_statistics_tabs {
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding: 0 0 20px 0;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    z-index: 1000000;
+}
+
+.dev_statistics_tabs .active {
+    border-bottom: 3px solid #ff9b3c;
+}
+
+.dev_statistics_tabs li {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.line_box .dev_statistics_line {
+    margin-top: 20px;
+    width: 98%;
+    height: calc(100% - 40px);
+    background: #fff;
+}

@@ -1,0 +1,40 @@
+.header-box {}
+
+.header-top {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: right;
+    border-bottom: 1px solid #f9c700;
+    background: #fff;
+}
+
+.header-mag {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    /* border: 1px solid red; */
+    margin-right: 20px;
+}
+
+.header-userinfo {
+    vertical-align: top;
+    margin: 0;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+}
+
+.header-avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.header-Breadcrumb {
+    padding-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
