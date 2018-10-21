@@ -3,56 +3,24 @@ const menuList = [
         title: '首页',
         key: '/home'
     },
-    // {
-    //     title: '提现管理',
-    //     key: '/ui',
-    //     children: [
-    //         {
-    //             title: '提现首页',
-    //             key: '/ui/index',
-    //         },
-    //         {
-    //             title: '支付宝提现',
-    //             key: '/ui/buttons',
-    //         },
-    //         {
-    //             title: '微信提现',
-    //             key: '/ui/modals',
-    //         },
-    //         {
-    //             title: '银行卡提现',
-    //             key: '/ui/loadings',
-    //         }
-    //     ]
-    // },
-    // {
-    //     title: '表单',
-    //     key: '/form',
-    //     children: [
-    //         {
-    //             title: '登录',
-    //             key: '/form/login',
-    //         },
-    //         {
-    //             title: '注册',
-    //             key: '/form/reg',
-    //         }
-    //     ]
-    // },
-    // {
-    //     title: '表格',
-    //     key: '/table',
-    //     children: [
-    //         {
-    //             title: '基础表格',
-    //             key: '/table/basic',
-    //         },
-    //         {
-    //             title: '高级表格',
-    //             key: '/table/high',
-    //         }
-    //     ]
-    // },
+    {
+        title: '提现管理',
+        key: '/withdraw',
+        children: [
+            {
+                title: '提现记录',
+                key: '/withdraw/index',
+            },
+            {
+                title: '提现认证',
+                key: '/withdraw/authenticat',
+            },
+            {
+                title: '认证商家',
+                key: '/withdraw/business',
+            }
+        ]
+    },
     {
         title: '设备统计',
         key: '/dev/statistics'
@@ -62,8 +30,12 @@ const menuList = [
         key: '/dev/index'
     },
     {
-        title: '城市管理',
-        key: '/city'
+        title: '商品管理',
+        key: '/product'
+    },
+    {
+        title: '地址管理',
+        key: '/address'
     },
     {
         title: '订单管理',
@@ -84,34 +56,41 @@ const menuList = [
         ]
     },
     {
-        title: '员工管理',
-        key: '/user'
+        title: '商户管理',
+        key: '/business'
     },
     {
-        title: '车辆地图',
-        key: '/bikeMap'
-    },
-    {
-        title: '图标',
-        key: '/charts',
-        children: [
-            {
-                title: '柱形图',
-                key: '/charts/bar'
-            },
-            {
-                title: '饼图',
-                key: '/charts/pie'
-            },
-            {
-                title: '折线图',
-                key: '/charts/line'
-            },
-        ]
+        title: '设备地图',
+        key: '/devMap'
     },
     {
         title: '权限设置',
         key: '/permission'
     },
+    {
+        title: '系统管理',
+        key: '/system',
+        children: [
+            {
+                title: '修改密码',
+                key: '/system/changepw'
+            },
+            {
+                title: '用户信息',
+                key: '/system/userinfo'
+            },
+            {
+                title: '系统日志',
+                key: '/system/log'
+            },
+        ]
+    }
+    // ,{
+    //     title: '积分',
+    //     key: '/integral'
+    // }, {
+    //     title: '优惠券',
+    //     key: '/coupon'
+    // }
 ];
 export default menuList;

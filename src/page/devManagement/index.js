@@ -100,11 +100,11 @@ class DevManagement extends React.Component {
 
                         })(
                             <Select
-                            initialValue={'status'}
+                                initialValue={'status'}
                                 style={{ width: '120px' }}
+                                placeholder="请选择状态"
                             // onChange={this.handleCurrencyChange}
-                            >
-                                <Option value="status">请选择状态</Option>
+                            > 
                                 <Option value="inline">在线</Option>
                                 <Option value="outline">离线</Option>
                                 <Option value="fail">故障</Option>
@@ -116,9 +116,9 @@ class DevManagement extends React.Component {
 
                         })(
                             <Select
-                            initialValue={'transaction'}
+                                initialValue={'transaction'}
                                 style={{ width: '120px' }}
-                            // onChange={this.handleCurrencyChange}
+                                placeholder="交易排序"
                             >
                             <Option value="transaction">交易排序</Option>
                             <Option value="transactionMon">销售额</Option>
@@ -131,9 +131,9 @@ class DevManagement extends React.Component {
 
                         })(
                             <Select
-                            initialValue={'wd'}
+                                initialValue={'wd'}
                                 style={{ width: '120px' }}
-                            // onChange={this.handleCurrencyChange}
+                                placeholder="网点"
                             >
                                 <Option value="wd">网点</Option>
                                 <Option value="bj">北京</Option>

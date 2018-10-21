@@ -138,12 +138,10 @@ export default class Permission2 extends React.Component {
                 }
             }
         }).then((res) => {
-            
             console.log(res)
             that.setState({
                 dataSource: res.result.item_list
             })
-             
         })
     }
     
@@ -179,12 +177,7 @@ export default class Permission2 extends React.Component {
         this.setState({
             visibelRole: false,
         });
-    }  
-
-
-
-
-
+    }   
     // 设置权限按钮
     showSetPermission=()=>{
         if(this.state.roleId){

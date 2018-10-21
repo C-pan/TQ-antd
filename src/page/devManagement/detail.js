@@ -11,13 +11,17 @@ export default class DevDetail extends React.Component {
         super(props);
         this.state = {
             'devDeatail': {},
-            showER:0
+            showER:0,
+            number:''
         };
     }
     componentWillMount(){ 
         var number=this.props.match.params.number
+
         this.requireData(number)
-         
+        this.setState({
+            'number': number
+        })
     }
      
     
@@ -52,7 +56,7 @@ export default class DevDetail extends React.Component {
             <div className="content-box clearfix"> 
                 {/* <div className="go_back"><Link to="/"> 返回上一级 </Link> </div> */}
                 <Breadcrumb className="header-Breadcrumb">
-                    <Breadcrumb.Item onClick={this.goBack}>设备列表</Breadcrumb.Item>
+                    <Breadcrumb.Item><Link to="/dev/index"> 设备列表</Link></Breadcrumb.Item>
                     <Breadcrumb.Item> 设备详情</Breadcrumb.Item>
                 </Breadcrumb>
                 <div className="whitebg pd20 rad3 clearfix">
@@ -68,12 +72,12 @@ export default class DevDetail extends React.Component {
                         </div>
 
                         <div className="devicedeticell">
-                            <a href="货柜.html">
+                            <Link to={"/dev/devdetail/container3/"+this.state.number}>
                                 <div className="devicbtn">
                                     <img src="/assets/images/devm/devicon00.png" className="deviceicon" alt='' />
                                     <span className="devicepan">货柜管理</span>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="devicedeticell">
                             <div className="deviceinfo">

@@ -8,18 +8,31 @@ export default class Header extends React.Component {
          const menu = (
              <Menu>
                  <Menu.Item>
-                     <a target="_blank" rel="noopener noreferrer" href="#">个人信息</a>
+                     <Link   to="/system/userinfo">个人信息</Link>
                  </Menu.Item>
                  <Menu.Item>
-                     <a target="_blank" rel="noopener noreferrer" href="#">注销</a>
+                     <a  rel="noopener noreferrer" href="#">注销</a>
                  </Menu.Item> 
+             </Menu>
+         );
+         const MsgList = (
+             <Menu>
+                 <Menu.Item>
+                     <Link to="/dev/index" >设备故障<Badge count={2}  style={{marginLeft:'10px'}}/></Link>
+                 </Menu.Item>
+                 <Menu.Item>
+                     <Link to="/order/errororder" >错误订单<Badge count={8} style={{ marginLeft: '10px' }} /></Link>
+                 </Menu.Item>
+                 <Menu.Item>
+                     <Link to="/order/errororder" >补货设备提醒<Badge count={2} style={{ marginLeft: '10px' }} /></Link>
+                 </Menu.Item>
              </Menu>
          );
          return(
              <div className="header-box">
                  <Row className="header-top">
                      <Col span={24}>
-                         <Dropdown overlay={menu}  >
+                         <Dropdown overlay={MsgList}  >
                              <span className="header-mag ant-dropdown-link"  >
                                  <Badge count={10}><Icon type="bell" style={{ fontSize: '25px' }} /></Badge>
                                  <Icon type="down" style={{ marginLeft: '2px' }}/>
