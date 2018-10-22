@@ -56,7 +56,7 @@ class DevManagement extends React.Component {
                             <div className={itme.state==1?'inline':'outline'}>
                             <div className="num">!</div>
                             </div>
-                            <img className='photo' src="/assets/images/shj.png" alt="" />
+                            <img className='photo' src={"/assets/images/shj" + itme.terminaltype+".png"} alt="" />
                             <div className='dev_info'>
                             <div className='nearby_time_tit'>{itme.name}</div>
                                 <div className='nearby_time_des'>{itme.number}</div>

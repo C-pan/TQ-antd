@@ -1,0 +1,278 @@
+/*********** 货柜2 图像算法 ***********/
+
+.container2_box {
+    position: relative;
+    margin: 10px auto;
+    padding: 40px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fbfbfb;
+    text-align: center;
+}
+
+.container2_box .container2_layer {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+    background: #ff9b3c;
+    text-align: center;
+}
+
+.container2_item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding:5px 25px;
+    overflow: hidden;
+    position: relative;
+    /* width: 220px; */
+    display: inline-block;
+    margin: 0 0 35px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.container2_item .numicon {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    background: #f05f71;
+    color: #fff;
+    border-radius: 23px;
+    width: 23px;
+    height: 23px;
+    display: block;
+    text-align: center;
+    line-height: 23px;
+}
+
+.container2_item .itempic {
+    display: table;
+    width: 100%;
+}
+
+.container2_item .table-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 160px;
+    overflow: hidden;
+}
+
+.container2_item .itempic img {
+    max-height: auto;
+}
+
+.container2_item .itemcont {
+    padding-bottom: 8px;
+    margin-top: 10px;
+}
+
+.container2_item .itemcont>p {
+    padding: 3px 0;
+}
+
+.container2_item .itemcontname {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    padding: 0 2px;
+    color: #424242;
+}
+
+.container2_item .itemcontprice {
+    /* margin: 0 10px 8px; */
+    display: block;
+    color: #f16173;
+    text-align: center;
+}
+
+.container2_item .rs_num {
+    height: 28px;
+    border: 1px solid #ebebeb;
+    margin: 0 10px;
+}
+
+.container2_item .rs_btn {
+    width: 30%;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container2_item .re_input {
+    width: 38%;
+    border: none;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    padding: 0px;
+    height: 26px;
+}
+
+.container2_itemlaydiv .rs_num {
+    border-radius: 20px;
+    height: 38px;
+}
+
+.container2_itemlaydiv .rs_btn {
+    height: 38px;
+    line-height: 38px;
+}
+
+.container2_itemlaydiv .re_input {
+    height: 35px;
+}
+
+.container2_itemlaydiv {
+    float: none;
+    margin: 20px auto;
+    border: none;
+}
+
+.container2_itemlaydiv .itempic {
+    border: 1px solid #e8e8e8;
+}
+
+.container2_itemlaydiv .itempic img {
+    width: 160px;
+    height: 160px;
+    margin: 10px auto;
+}
+
+.container2_itemmore {
+    /* width: 160px; */
+}
+
+.container2_itemmore .itempic img {
+    width: 150px;
+    height: 150px;
+}
+
+.addcontainer2_itemmore .itemcontname {
+    color: #e8e8e8;
+}
+
+.addcontainer2_itemmore .itemcontprice {
+    color: #e8e8e8;
+}
+
+.idcarditem {
+    float: left;
+    width: 160px;
+    height: 110px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    position: relative;
+    margin: 10px 20px 10px 0;
+}
+
+.goodchatbox {
+    padding: 0px 0 30px;
+    text-align: center;
+}
+
+.goodchattop {
+    position: relative;
+    width: 100px;
+    margin: 50px auto 20px;
+}
+
+.goodchattop span {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+}
+
+.goodchattoppic img {
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+}
+
+.goodaddpic {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 96px;
+    height: 96px;
+    border: 2px solid #dadada;
+}
+
+.goodaddpic img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+
+/*********** 货柜3 称算法 ***********/
+
+#container3_box {
+    width: 100%;
+    height: 100%;
+}
+
+.container2_layer {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background: #ff9b3c;
+}
+
+.container3_itme {
+    margin: 40px auto 16px;
+    width: 49%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.container3_itme:nth-of-type(2n) {
+    margin-left: 2%;
+}
+
+.container3_itme:hover {
+    background: #eaeaea;
+}
+
+.container3_itme .itme_img {
+    width: 120px;
+    height: 120px;
+}
+
+.container3_itme .itme_info {
+    width: 120px;
+    height: 120px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.container3_itme .itme_info div {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+}
+

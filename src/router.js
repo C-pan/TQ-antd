@@ -19,6 +19,8 @@ import Yl from './page/withdraw/yl';
 import DevManagement from './page/devManagement';
 import DevDetail from './page/devManagement/detail';
 import DevStatistics from './page/devManagement/statistics'; 
+import Container1 from './page/devManagement/container1'; 
+import Container2 from './page/devManagement/container2'; 
 import Container3 from './page/devManagement/container3'; 
 
 import OrderIndex from './page/order';
@@ -45,7 +47,7 @@ export default class CRouter extends React.Component{
                 <App>
                     <Switch> 
                         <Route path="/about" component={About}></Route> 
-                        {/* <Route path="/login" component={Login}></Route> */}
+                        <Route path="/login" component={Login}></Route>
                         <Route exact={true} path="/about/abc" component={About}></Route>
                         <Route path="/topics" component={Topic}></Route>
                         <Route path="/" render={() =>
@@ -66,6 +68,8 @@ export default class CRouter extends React.Component{
                                 <Route path="/dev/index" component={DevManagement}></Route>
                                 <Route path="/dev/statistics" component={DevStatistics}></Route>
                                 <Route path="/dev/detail/:number" component={DevDetail}></Route>
+                                <Route path="/dev/devdetail/container1/:number" component={Container1}></Route>
+                                <Route path="/dev/devdetail/container2/:number" component={Container2}></Route>
                                 <Route path="/dev/devdetail/container3/:number" component={Container3}></Route>
                                 {/* 订单 */}
                                 <Route path="/order/index" component={OrderIndex}></Route>
