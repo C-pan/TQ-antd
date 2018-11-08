@@ -50,9 +50,10 @@ export default class CRouter extends React.Component{
                         <Route path="/login" component={Login}></Route>
                         <Route exact={true} path="/about/abc" component={About}></Route>
                         <Route path="/topics" component={Topic}></Route>
+                        
                         <Route path="/" render={() =>
-                            <Admin>
-                                
+                            <Admin> 
+                                <Route exact path="/" component={Home}></Route>
                                 <Route path="/home" component={Home}></Route>
                                 <Route path="/about" component={About}></Route>
                                 

@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
+import { change_path } from '../../store/actionType'
+import { change_path_fun } from '../../store/actionCotroer'
 import axios from '../../axios';
 import Utils from '../../utils';
 import { Breadcrumb, Form, Icon, Input, Table, Button, Select, Modal, Radio, Tree, Transfer, Message } from 'antd';
@@ -60,7 +63,7 @@ const columns = [
 
  
 // 权限设置模块页面
-export default class Permission2 extends React.Component {
+class Permission2 extends React.Component {
     state = {
         visibelRole: false,
         visibelSetPermission: false,
@@ -72,6 +75,7 @@ export default class Permission2 extends React.Component {
     };
     componentWillMount = () => {
         this.requestData()
+        this.props.changePath()
     };
     requestData(page) {
         var that = this;
@@ -367,3 +371,22 @@ const CreateBusinessModal = Form.create()(
             )
         }
     })
+
+
+
+
+
+
+
+
+const mapStateToProps = (state, ownProps) => ({
+    navKey: state.navKey
+})
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        changePath() {
+            dispatch(change_path_fun(ownProps.match.path))
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Permission2)

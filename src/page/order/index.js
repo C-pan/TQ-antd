@@ -146,8 +146,8 @@ export default class Order extends React.Component{
     }
     render(){
         return(
-            <div className="content-box clearfix    ">
-                <div className="order_box">
+            <div className="content-box-t clearfix    ">
+                <div className="order_box" style={{background:'#fff'}}>
                     <table id="order_tbale">
                         <thead>
                             <tr id="order_table_tit">

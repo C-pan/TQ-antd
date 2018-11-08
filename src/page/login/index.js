@@ -25,7 +25,7 @@ export default class Home extends React.Component {
                     </div>
                 </div>
                 <div className="login-footer">
-                    <p>Copyright ©2017 EasyBox信发后台管理系统</p>
+                    <p>Copyright ©2017-2018 淘趣售货机管理系统</p>
                 </div>
             </div>
         )

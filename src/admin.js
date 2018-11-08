@@ -10,13 +10,14 @@ import NoMatch from './page/nomatch'
 import NavLeft from './components/NavLeft'
 import Header from './components/Header' 
 import Footer from './components/Footer' 
-
+import { connect} from "react-redux"
 // 日期文字语言配置 
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 moment.locale('zh-cn');
 
-export default class Admin extends React.Component {
+ class Admin extends React.Component {
+    
     render() {
         return (
             <div className="container">
@@ -35,3 +36,15 @@ export default class Admin extends React.Component {
         )
     }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+    navKey: state
+})
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        // changePath() {
+        //     dispatch(change_path_fun(ownProps.match.path))
+        // }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Admin)

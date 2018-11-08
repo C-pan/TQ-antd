@@ -148,7 +148,7 @@ export default class DevDetail extends React.Component {
                         </div>
                         <div className="devicedeticell">
                             <div className="deviceinfo">
-                                <img src="/assets/images/devm/m02.png" className="deviceinfopic" alt=''/>
+                                <img src="/assets/images/devm/dev.png" className="deviceinfopic" alt=''/>
                                 {this.state.devDeatail.state == 1 ?<span className="deviceinfosign dev_inline">在线</span>:''}
                                 {this.state.devDeatail.state == 0 ?<span className="deviceinfosign dev_outline">离线</span>:''}
                                 {this.state.devDeatail.state == 3 ?<span className="deviceinfosign dev_outline">故障</span>:''}

@@ -1,9 +1,10 @@
 import React from 'react'; 
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import './index.css';
 import { Row, Col, Dropdown, Breadcrumb, Menu, Icon, Badge } from 'antd'; 
 
-export default class Header extends React.Component {
+ class Header extends React.Component {
      render(){
          const menu = (
              <Menu>
@@ -30,11 +31,12 @@ export default class Header extends React.Component {
          );
          return(
              <div className="header-box">
+             {/* <div>navKey:{this.props.navKey}</div> */}
                  <Row className="header-top">
                      <Col span={24}>
                          <Dropdown overlay={MsgList}  >
                              <span className="header-mag ant-dropdown-link"  >
-                                 <Badge count={10}><Icon type="bell" style={{ fontSize: '25px' }} /></Badge>
+                                 <Badge count={10}><Icon type="bell" style={{ fontSize: '20px' }} /></Badge>
                                  <Icon type="down" style={{ marginLeft: '2px' }}/>
                              </span>
                          </Dropdown>
@@ -49,3 +51,12 @@ export default class Header extends React.Component {
          )
      }
 }
+ 
+
+
+const mapStateToProps = (state, ownProps) => ({
+  navKey: state.navKey
+})
+
+export default connect(mapStateToProps,null)(Header)
+

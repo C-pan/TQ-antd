@@ -54,7 +54,7 @@ class DevManagement extends React.Component {
                     <Col span={6}>
                         <Link to={'/dev/detail/' + itme.tid} className="product_itme">
                             <div className={itme.state==1?'inline':'outline'}>
-                            <div className="num">!</div>
+                            {/* <div className="num">!</div> */}
                             </div>
                             <img className='photo' src={"/assets/images/shj" + itme.terminaltype+".png"} alt="" />
                             <div className='dev_info'>

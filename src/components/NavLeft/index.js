@@ -1,12 +1,14 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
+import { click_path_fun} from '../../store/actionCotroer'
 import './index.css';
 import menuConfig from '../../config/menuConfig';
 import ScrollArea  from  'react-scrollbar';
 const SubMenu = Menu.SubMenu;
 
-export default class NavLeft extends React.Component {
+class NavLeft extends React.Component {
     state = {
         // current: '3',
         theme: 'dark',
@@ -17,24 +19,29 @@ export default class NavLeft extends React.Component {
         this.setState({
             menuTreeNode
         })
+
+        
     };
-    
+    componentDidMount=()=>{
+        
+    }
     // 渲染菜单 配置
     renderMenu=(data) => {
         return data.map((item)=>{
             if (item.children){
                 return(
-                    <SubMenu key={item.key} title={<span><Icon type="mail" /><span>{item.title}</span></span>}>
+                    <SubMenu key={item.key} title={<span><Icon type={item.type ? item.type : 'appstore'}  /><span>{item.title}</span></span>}>
                         {this.renderMenu(item.children)}
                     </SubMenu>
                 )
             }
-            return < Menu.Item key={item.key} > <Link to={item.key}><Icon type="appstore" />{item.title} </Link></Menu.Item >
+            return < Menu.Item key={item.key} > <Link to={item.key}><Icon type={item.type ? item.type :'appstore'} />{item.title} </Link></Menu.Item >
         })
     }
     handleClick = (e) => {
         console.log('Clicked: ', e);
         this.setState({ current: e.key });
+        this.props.ClickPath(e.key)
     }
     onOpenChange = (openKeys) => {
         const state = this.state;
@@ -56,7 +63,8 @@ export default class NavLeft extends React.Component {
         };
         return map[key] || [];
     }
-    render() {
+    render() { 
+        const { navKey}=this.props
         return (
             <div>
                 <div className="logo">
@@ -75,7 +83,8 @@ export default class NavLeft extends React.Component {
                         theme={this.state.theme}
                         mode="inline"
                         openKeys={this.state.openKeys}
-                        selectedKeys={[this.state.current]}
+                        // selectedKeys={[this.state.current]}
+                        selectedKeys={navKey}
                         // style={{ width: 220 }}
                         onOpenChange={this.onOpenChange}
                         onClick={this.handleClick}
@@ -102,3 +111,16 @@ export default class NavLeft extends React.Component {
         );
     }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+    navKey: state.layout.navKey
+})
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        ClickPath(val) {
+            dispatch(click_path_fun(val))
+            console.log("e.key:"+val)
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(NavLeft);

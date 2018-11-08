@@ -1,10 +1,11 @@
 .order_box {
-    margin: 1% 2%;
-    width: 96%;
+    margin: 1% 0%;
+    width: 100%;
     font-family: "Microsoft YaHei";
     color: rgb( 51, 51, 51);
     text-align: center;
     height: 200px;
+    background: #fff;
 }
 
 #order_table_tit {

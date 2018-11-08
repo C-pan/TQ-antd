@@ -49,63 +49,63 @@ const columns = [
 const TransferData=[
     {
         name:"chen",
-        title:"张三",
+        title:"张全",
         key:"cs1"
     },
     {
         name:"chen2",
-        title:"李四",
+        title:"李登",
         key:"cs2"
     },
     {
         name:"chen3",
-        title:"王五",
+        title:"陈海涛",
         key:"cs3"
     },
     {
         name:"chen",
-        title:"张三",
-        key:"cs1"
+        title:"王磊",
+        key:"cs4"
     },
     {
         name:"chen2",
-        title:"李四",
-        key:"cs2"
+        title:"陈浩全",
+        key:"cs5"
     },
     {
         name:"chen3",
-        title:"王五",
-        key:"cs3"
+        title:"袁碧智",
+        key:"cs6"
     },
     {
         name:"chen",
-        title:"张三",
-        key:"cs1"
+        title:"彭小丽",
+        key:"cs7"
     },
     {
         name:"chen2",
-        title:"李四",
-        key:"cs2"
+        title:"李梅梅",
+        key:"cs8"
     },
     {
         name:"chen3",
-        title:"王五",
-        key:"cs3"
+        title:"刘小霞",
+        key:"cs9"
     },
     {
         name:"chen",
-        title:"张三",
-        key:"cs1"
+        title:"贺仙成",
+        key:"cs10"
     },
     {
         name:"chen2",
-        title:"李四",
-        key:"cs2"
+        title:"陈传亮",
+        key:"cs11"
     },
     {
-        name:"chen3",
-        title:"王五",
-        key:"cs3"
+        name:"chen223",
+        title:"周涛",
+        key:"cs12"
     },
     
 ]

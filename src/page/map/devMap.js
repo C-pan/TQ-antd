@@ -17,13 +17,13 @@ export default class Order extends React.Component{
         }, {
             type: '时间查询'
         }, {
-            type: 'SELECT',
-            label: '订单状态',
+            type: 'INPUT',
+            label: '设备编号',
             field: 'order_status',
-            placeholder: '全部',
+            placeholder: '请输入设备编号',
             initialValue: '0',
             width: 150,
-            list: [{id: '0', name: '全部'}, {id: '1', name: '进行中'}, {id: '3', name: '行程结束'}]
+            // list: [{id: '0', name: '全部'}, {id: '1', name: '进行中'}, {id: '3', name: '行程结束'}]
         }
     ]
 
@@ -92,7 +92,7 @@ export default class Order extends React.Component{
         // map.clearOverlays();
 
         //添加起始图标
-        let startPointIcon = new window.BMap.Icon("/assets/start_point.png", new window.BMap.Size(36, 42), {
+        let startPointIcon = new window.BMap.Icon("/assets/images/markers1.png", new window.BMap.Size(40, 40), {
             imageSize: new window.BMap.Size(36, 42),
             anchor: new window.BMap.Size(18, 42)
         });
@@ -100,7 +100,7 @@ export default class Order extends React.Component{
         var bikeMarkerStart = new window.BMap.Marker(startPoint, { icon: startPointIcon });
         this.map.addOverlay(bikeMarkerStart);
 
-        let endPointIcon = new window.BMap.Icon("/assets/end_point.png", new window.BMap.Size(36, 42), {
+        let endPointIcon = new window.BMap.Icon("/assets/images/markers1.png", new window.BMap.Size(40, 40), {
             imageSize: new window.BMap.Size(36, 42),
             anchor: new window.BMap.Size(18, 42)
         });
@@ -114,31 +114,31 @@ export default class Order extends React.Component{
             routeList.push(point);
         })
         // 行驶路线
-        var polyLine = new window.BMap.Polyline(routeList, {
-            strokeColor: "#ef4136",
-            strokeWeight: 3,
-            strokeOpacity: 1
-        });
-        this.map.addOverlay(polyLine);
+        // var polyLine = new window.BMap.Polyline(routeList, {
+        //     strokeColor: "#ef4136",
+        //     strokeWeight: 3,
+        //     strokeOpacity: 1
+        // });
+        // this.map.addOverlay(polyLine);
 
         // 服务区路线
-        let serviceList = res.service_list;
-        let servicePointist = [];
-        serviceList.forEach((item) => {
-            let point = new window.BMap.Point(item.lon, item.lat);
-            servicePointist.push(point);
-        })
-        // 画线
-        var polyServiceLine = new window.BMap.Polyline(servicePointist, {
-            strokeColor: "#ef4136",
-            strokeWeight: 3,
-            strokeOpacity: 1
-        });
-        this.map.addOverlay(polyServiceLine);
+        // let serviceList = res.service_list;
+        // let servicePointist = [];
+        // serviceList.forEach((item) => {
+        //     let point = new window.BMap.Point(item.lon, item.lat);
+        //     servicePointist.push(point);
+        // })
+        // // 画线
+        // var polyServiceLine = new window.BMap.Polyline(servicePointist, {
+        //     strokeColor: "#ef4136",
+        //     strokeWeight: 3,
+        //     strokeOpacity: 1
+        // });
+        // this.map.addOverlay(polyServiceLine);
 
         // 添加地图中的自行车
         let bikeList = res.bike_list;
-        let bikeIcon = new window.BMap.Icon("/assets/bike.jpg", new window.BMap.Size(36, 42), {
+        let bikeIcon = new window.BMap.Icon("/assets/images/markers1.png", new window.BMap.Size(40, 40), {
             imageSize: new window.BMap.Size(36, 42),
             anchor: new window.BMap.Size(18, 42)
         });
@@ -169,12 +169,10 @@ export default class Order extends React.Component{
     render(){
         return (
             <div>
-                <Card>
-                    <BaseForm formList={this.formList} filterSubmit={this.handleFilterSubmit}/>
-                </Card>
                 <Card style={{marginTop:10}}>
-                    <div>共{this.state.total_count}台设备</div>
-                    <div id="container" style={{height:500}}></div>
+                    <BaseForm formList={this.formList} filterSubmit={this.handleFilterSubmit} /> 
+                    {/* <span>共{this.state.total_count}台设备</span> */}
+                    <div id="container" style={{height:420}}></div>
                 </Card>
             </div>
         );
